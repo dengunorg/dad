@@ -11,7 +11,7 @@ const config: Config = {
   url: "https://dad.dengun.net",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/dad/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
