@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Dengun Agency Docs",
-  tagline: "Dinosaurs are cool",
+  title: "Dengun Agency & Developers",
+  tagline: "",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -26,7 +26,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en"]
   },
 
   presets: [
@@ -38,94 +38,89 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         blog: {
           path: "journal",
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         theme: {
-          customCss: "./src/css/custom.css",
-        },
-      } satisfies Preset.Options,
-    ],
+          customCss: "./src/css/custom.css"
+        }
+      } satisfies Preset.Options
+    ]
   ],
 
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "AD",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Dengun DAD logo",
+        src: "img/logo.svg"
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Docs",
+          label: "Docs"
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
-          position: "right",
-        },
-      ],
+          position: "right"
+        }
+      ]
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Dengun",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Dengun's website",
+              to: "https://www.dengun.com/"
             },
-          ],
+            {
+              label: "GitLab",
+              to: "https://gitlab.dengun.org/"
+            },
+            {
+              label: "Zoho Projects",
+              to: "https://projects.zoho.com/portal/dengun"
+            },
+            {
+              label: "Zoho People",
+              to: "https://people.zoho.com/dengun/zp"
+            }
+          ]
         },
         {
-          title: "Community",
+          title: "Archives",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Knowledge Base (v1, deprecated)",
+              href: "https://gitlab.dengun.org/project/dick"
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
-        },
+              label: "Knowledge Base (v2, deprecated)",
+              href: "https://sites.google.com/dengun.com/playbook/dengun-knowledge-base"
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} All rights reserved`
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+      darkTheme: prismThemes.dracula
+    }
+  } satisfies Preset.ThemeConfig
 };
 
 export default config;
