@@ -2,13 +2,24 @@
 sidebar_position: 2
 ---
 
-# Project Release — Checklist
+# Project Release — Guide
 
 **Purposes**:
 
 - ensure a release goes as smoothly as possible (without hiccups)
 - identify issues, to act fast and accordingly
 - set a precendent for other projects, and make further releases faster
+- ensure that the website/app is released in a robust, secure way
+
+## What can go wrong?
+
+Examples of issues that can go wrong just because a domain isn't set properly:
+
+- CORS issues with some resources (usually fonts, and some of them weren't in staging)
+- Inability to enable7disable plugins (like WP-Rocket, and Elementor Pro, whose account wasn't activable)
+- Inability to log in after logging out (had to do a password reset)
+- Inability to open Elementor editor
+- Wordpress admin bar (on top) wasn't displayed on pages overall (even after logging in)
 
 ## First Release
 
@@ -23,16 +34,19 @@ Are team members ready to respond to a last-minute intervention? This includes:
 - Marketing/content specialist (for SEO and meta content)
 - Are there additional procedures outlined in the project's README file?
 
-### Infrastructure
+### Infrastructure and Security
 
 - does sysadmin have enough info on hosting? (production URL, hosting machine, etc.)
 - Is there a project backup ready? (of code, content, and data)
 - Are we using the latest possible (and **tested**) PHP version and Wordpress version?
-- Are plugins updated to the latest versions matching this project's WordPress version?
+- Are plugins and theme updated to the latest versions matching this project's WordPress version?
     - and were they tested beforehand?
+- have we changed the login URL yet?
+- have we disabled file editing?
 - Is the infrastructure ready for the expected caching mechanisms (e.g.: is Redis installed? Is Zend OpCache set up)
 - Server: Prepare production configuration files and pipelines
     - this includes final domain and media upload URLs
+    - IMPORTANT: make sure that it's properly configured to `www.`
     - in Wordpress, that's `wp-config.php`
 - Set up proper caching (based on what the Infrastructure allows). This includes:
     - Pages (useful for Elementor websites, for example)
@@ -93,3 +107,4 @@ Focus on:
 - Project-specific **release instructions** (if any, see project's README)
 - Cleaning up server-side cache (e.g.: from WP Rocket)
 - Doing post-release routines (e.g.: update content, publish content, sync data structures)
+- Security (e.g.: is rendered content escaped properly?)
