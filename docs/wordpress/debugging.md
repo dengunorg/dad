@@ -41,3 +41,7 @@ Use Localtunnel (requires node.js) to expose your project with a custom domain a
 # e.g.: npx localtunnel -h -p 8000 --subdomain "projectname"
 > npx localtunnel -h -p <PORT>(--subdomain <SUBDOMAIN_NAME>)
 ```
+
+## Plugin Recommendations
+
+See Plugins for more details
